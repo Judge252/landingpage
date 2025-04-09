@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيادة العلاج الطبيعي - تواصل معنا</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="products.html">منتجاتنا</a></li>
+                    <li><a href="treatments.html">العلاجات</a></li>
+                    <li><a href="favorite.html">المفضلة</a></li>
+                    <li><a href="contact.html" class="active">تواصل معنا</a></li>
+                    <li class="cart-icon desktop-cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="auth-icon desktop-auth">
+                        <a href="login.html">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="contact-icon desktop-contact">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-options">
+                            <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                            <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-controls">
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <!-- Auth Icon -->
+                <div class="auth-icon">
+                    <a href="login.html">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-options">
+                        <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                        <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                    </div>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Mobile Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="products.html">منتجاتنا</a></li>
+            <li><a href="treatments.html">العلاجات</a></li>
+            <li><a href="favorite.html">المفضلة</a></li>
+            <li><a href="contact.html" class="active">تواصل معنا</a></li>
+        </ul>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-page">
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>معلومات التواصل</h2>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>الهاتف: 011 123 4567</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>البريد: <a href="mailto:info@physioclinic.com">info@physioclinic.com</a></span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>العنوان: 14 شارع ابوبكر، طرعان</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>ساعات العمل: 9 ص - 9 م</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>أرسل لنا رسالة</h2>
+                <form id="contact-form">
+                    <div class="form-group required">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group required">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group required">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group required">
+                        <label for="message">رسالتك</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838.6563770075585!2d35.36858250239561!3d32.775670065158195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c4930181a99d1%3A0xe2f7e939850b8545!2z15TXp9ec15nXoNeZ16fXlCDXnNek15nXlteZ15XXqteo16TXmdeUINeV15HXqNeZ15DXldeqIFRoZSBDbGluaWM!5e0!3m2!1sen!2seg!4v1741385133678!5m2!1sen!2seg" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="footer-logo">
+                    <p>نحن مركز متخصص في العلاج الطبيعي وتوفير أحدث المنتجات الطبية لتحسين صحتك وراحتك.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="products.html">منتجاتنا</a></li>
+                        <li><a href="treatments.html">العلاجات</a></li>
+                        <li><a href="favorite.html">المفضلة</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+966 11 234 5678</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@ptclinic.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية للحصول على آخر العروض والأخبار</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        <button type="submit" class="btn primary-btn">اشترك</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 عيادة العلاج الطبيعي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العلاجات | عيادة العلاج الطبيعي</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/treatments.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="products.html">منتجاتنا</a></li>
+                    <li><a href="treatments.html" class="active">العلاجات</a></li>
+                    <li><a href="favorite.html">المفضلة</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li class="cart-icon desktop-cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="auth-icon desktop-auth">
+                        <a href="login.html">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="contact-icon desktop-contact">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-options">
+                            <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                            <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-controls">
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <!-- Auth Icon -->
+                <div class="auth-icon">
+                    <a href="login.html">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-options">
+                        <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                        <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                    </div>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Mobile Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="products.html">منتجاتنا</a></li>
+            <li><a href="treatments.html" class="active">العلاجات</a></li>
+            <li><a href="favorite.html">المفضلة</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="treatments-hero">
+            <div class="container">
+                <h1>العلاجات</h1>
+                <p>اكتشف مجموعتنا المميزة من العلاجات الطبيعية</p>
+            </div>
+        </section>
+
+        <!-- Treatment Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <h2>فئات العلاجات</h2>
+                <div class="categories-container">
+                    <div class="category-card" data-category="massage">
+                        <div class="category-icon"><i class="fas fa-hands"></i></div>
+                        <h3>العلاج بالمساج</h3>
+                    </div>
+                    <div class="category-card" data-category="exercise">
+                        <div class="category-icon"><i class="fas fa-running"></i></div>
+                        <h3>العلاج بالتمارين</h3>
+                    </div>
+                    <div class="category-card" data-category="electrotherapy">
+                        <div class="category-icon"><i class="fas fa-bolt"></i></div>
+                        <h3>العلاج الكهربائي</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatments Section -->
+        <section class="treatments-section">
+            <div class="container">
+                <div class="treatments-header">
+                    <h2>علاجاتنا المميزة</h2>
+                    <div class="filters">
+                        <select id="category-filter">
+                            <option value="all">جميع الفئات</option>
+                            <option value="massage">العلاج بالمساج</option>
+                            <option value="exercise">العلاج بالتمارين</option>
+                            <option value="electrotherapy">العلاج الكهربائي</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="treatments-grid" id="treatments-container"></div>
+            </div>
+        </section>
+
+        <!-- Featured Treatment Banner -->
+        <section class="featured-treatment">
+            <div class="container">
+                <div class="featured-content">
+                    <h2>علاج الشهر</h2>
+                    <h3>علاج المساج العميق</h3>
+                    <p>تجربة مساج عميق لتخفيف التوتر والآلام</p>
+                    <button class="btn primary-btn">احجز الآن</button>
+                </div>
+                <div class="featured-image">
+                    <img src="assets/images/5.jpg" alt="علاج المساج العميق">
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>ماذا يقول عملاؤنا</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="assets/images/nobg me.png" alt="صورة العميل">
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"العلاج بالمساج ساعدني كثيرًا في تخفيف آلام الظهر."</p>
+                        <p class="customer-name">أحمد محمد</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="assets/images/nobg me.png" alt="صورة العميل">
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"التمارين العلاجية غيرت حياتي للأفضل."</p>
+                        <p class="customer-name">سارة عبدالله</p>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-testimonial"><i class="fas fa-chevron-right"></i></button>
+                    <button class="next-testimonial"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>سجل في نشرتنا البريدية</h2>
+                    <p>احصل على خصم 10% على طلبك الأول وتابع أحدث العروض والمنتجات الجديدة</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                        <button type="submit" class="btn primary-btn">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="footer-logo">
+                    <p>نحن مركز متخصص في العلاج الطبيعي وتوفير أحدث المنتجات الطبية لتحسين صحتك وراحتك.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="products.html">منتجاتنا</a></li>
+                        <li><a href="treatments.html">العلاجات</a></li>
+                        <li><a href="favorite.html">المفضلة</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+966 11 234 5678</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@ptclinic.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية للحصول على آخر العروض والأخبار</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        <button type="submit" class="btn primary-btn">اشترك</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 عيادة العلاج الطبيعي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/treatments.js"></script>
+</body>
+</html>

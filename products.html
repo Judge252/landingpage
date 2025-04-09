@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجاتنا | عيادة العلاج الطبيعي</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="products.html" class="active">منتجاتنا</a></li>
+                    <li><a href="treatments.html">العلاجات</a></li>
+                    <li><a href="favorite.html">المفضلة</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li class="cart-icon desktop-cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="auth-icon desktop-auth">
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="contact-icon desktop-contact">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-options">
+                            <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                            <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-controls">
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <div class="auth-icon">
+                    <a href="profile.html">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-options">
+                        <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                        <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                    </div>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Mobile Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="products.html" class="active">منتجاتنا</a></li>
+            <li><a href="treatments.html">العلاجات</a></li>
+            <li><a href="favorite.html">المفضلة</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="profile.html">الملف الشخصي</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="products-hero">
+            <div class="container">
+                <h1>منتجاتنا</h1>
+                <p>اكتشف مجموعتنا المميزة من أجهزة ومنتجات العلاج الطبيعي</p>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <h2>فئات المنتجات</h2>
+                <div class="categories-container">
+                    <div class="category-card" data-category="massage">
+                        <div class="category-icon"><i class="fas fa-hands"></i></div>
+                        <h3>أجهزة المساج</h3>
+                    </div>
+                    <div class="category-card" data-category="treadmill">
+                        <div class="category-icon"><i class="fas fa-running"></i></div>
+                        <h3>أجهزة الركض</h3>
+                    </div>
+                    <div class="category-card" data-category="pillows">
+                        <div class="category-icon"><i class="fas fa-bed"></i></div>
+                        <h3>وسائد طبية</h3>
+                    </div>
+                    <div class="category-card" data-category="supports">
+                        <div class="category-icon"><i class="fas fa-user-plus"></i></div>
+                        <h3>منتجات كبار السن</h3>
+                    </div>
+                    <div class="category-card" data-category="measuring">
+                        <div class="category-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>أجهزة قياس</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-header">
+                    <h2>منتجاتنا المميزة</h2>
+                    <div class="filters">
+                        <select id="category-filter">
+                            <option value="all">جميع الفئات</option>
+                            <option value="massage">أجهزة المساج</option>
+                            <option value="treadmill">أجهزة الركض</option>
+                            <option value="pillows">وسائد طبية</option>
+                            <option value="supports">منتجات كبار السن</option>
+                            <option value="measuring">أجهزة قياس</option>
+                        </select>
+                        <select id="sort-filter">
+                            <option value="popular">الأكثر شعبية</option>
+                            <option value="price-low">السعر: من الأقل للأعلى</option>
+                            <option value="price-high">السعر: من الأعلى للأقل</option>
+                            <option value="newest">الأحدث</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid" id="products-container"></div>
+                <div class="pagination">
+                    <button id="prev-page" disabled><i class="fas fa-chevron-right"></i> السابق</button>
+                    <div class="page-numbers">
+                        <span class="current-page">1</span> من <span class="total-pages">5</span>
+                    </div>
+                    <button id="next-page">التالي <i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Product Banner -->
+        <section class="featured-product">
+            <div class="container">
+                <div class="featured-content">
+                    <h2>منتج الشهر</h2>
+                    <h3>جهاز المساج المحمول برو</h3>
+                    <p>استمتع بتجربة مساج احترافية في منزلك مع جهازنا المميز بتقنية الاهتزاز العميق</p>
+                    <div class="featured-price">
+                        <span class="old-price">1,200 دولار</span>
+                        <span class="new-price">899 دولار</span>
+                    </div>
+                    <button class="btn primary-btn">اطلب الآن وخصم 25%</button>
+                </div>
+                <div class="featured-image">
+                    <img src="assets/images/5.jpg" alt="جهاز المساج المحمول برو">
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>ماذا يقول عملاؤنا</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="assets/images/nobg me.png" alt="صورة العميل">
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"منتجات رائعة وجودة عالية، ساعدني جهاز المساج بشكل كبير في التخفيف من آلام الظهر المزمنة."</p>
+                        <p class="customer-name">أحمد محمد</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="assets/images/nobg me.png" alt="صورة العميل">
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"الوسادة الطبية غيرت نومي بشكل كامل. لم أعد أعاني من آلام الرقبة بعد استخدامها."</p>
+                        <p class="customer-name">سارة عبدالله</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="assets/images/nobg me.png" alt="صورة العميل">
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"توصيل سريع وخدمة عملاء ممتازة. المنتجات تستحق كل دولار. سأكرر التجربة مرة أخرى."</p>
+                        <p class="customer-name">خالد العمري</p>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-testimonial"><i class="fas fa-chevron-right"></i></button>
+                    <button class="next-testimonial"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>سجل في نشرتنا البريدية</h2>
+                    <p>احصل على خصم 10% على طلبك الأول وتابع أحدث العروض والمنتجات الجديدة</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                        <button type="submit" class="btn primary-btn">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="footer-logo">
+                    <p>نحن مركز متخصص في العلاج الطبيعي وتوفير أحدث المنتجات الطبية لتحسين صحتك وراحتك.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="products.html">منتجاتنا</a></li>
+                        <li><a href="treatments.html">العلاجات</a></li>
+                        <li><a href="favorite.html">المفضلة</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+966 11 234 5678</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@ptclinic.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية للحصول على آخر العروض والأخبار</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        <button type="submit" class="btn primary-btn">اشترك</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 عيادة العلاج الطبيعي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Prevent double initialization of mobile menu
+        window.mobileMenuInitialized = true;
+    </script>
+    <script src="js/products.js"></script>
+    
+    <!-- Mobile Menu Test Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Mobile menu test script loaded');
+            
+            // Direct test of mobile menu functionality
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                console.log('Mobile menu elements found by test script');
+                
+                // Add a direct click handler as backup
+                menuToggle.addEventListener('click', function(e) {
+                    console.log('Menu toggle clicked directly from test script');
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Force toggle the menu visibility
+                    if (mobileMenu.style.display === 'flex') {
+                        mobileMenu.style.display = 'none';
+                        console.log('Menu hidden by direct style');
+                    } else {
+                        mobileMenu.style.display = 'flex';
+                        console.log('Menu shown by direct style');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

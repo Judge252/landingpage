@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج | عيادة العلاج الطبيعي</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="product-detail.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <!-- Header (Reused from products.html) -->
+    <header id="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="عيادة العلاج الطبيعي" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="products.html">منتجاتنا</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li class="cart-icon desktop-cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="contact-icon desktop-contact">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-options">
+                            <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                            <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-controls">
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-options">
+                        <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                        <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                    </div>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Mobile Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="products.html">منتجاتنا</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Product Detail Section -->
+        <section class="product-detail-section">
+            <div class="container">
+                <div class="product-detail">
+                    <div class="product-card" id="product-card"></div>
+                    <div class="product-detail-info">
+                        <h1 id="product-name"></h1>
+                        <div class="product-rating">
+                            <div class="stars" id="product-stars"></div>
+                            <span class="review-count" id="product-review-count"></span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price" id="product-current-price"></span>
+                            <span class="old-price" id="product-old-price"></span>
+                        </div>
+                        <p id="product-description">وصف المنتج يظهر هنا...</p>
+                        <button class="btn primary-btn add-to-cart-btn">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Reused from products.html) -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="logo">
+                    <img src="logo.png" alt="عيادة العلاج الطبيعي" class="logo-image">
+                </div>
+                <p>نقدم أفضل المنتجات الطبية والعلاجية لراحتك وصحتك. نحن هنا لمساعدتك في كل خطوة نحو حياة صحية أفضل.</p>
+                <div class="payment-methods">
+                    <span><i class="fab fa-cc-visa"></i></span>
+                    <span><i class="fab fa-cc-mastercard"></i></span>
+                    <span><i class="fab fa-cc-apple-pay"></i></span>
+                    <span><i class="fab fa-cc-paypal"></i></span>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="products.html">منتجاتنا</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>فئات المنتجات</h3>
+                <ul>
+                    <li><a href="#">أجهزة المساج</a></li>
+                    <li><a href="#">أجهزة الركض</a></li>
+                    <li><a href="#">وسائد طبية</a></li>
+                    <li><a href="#">دعامات طبية</a></li>
+                    <li><a href="#">أجهزة قياس</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> الهاتف: 011 123 4567</li>
+                    <li><i class="fas fa-envelope"></i> البريد: <a href="/cdn-cgi/l/email-protection#750c1b131a35100d14180d11185b161a18"><span class="__cf_email__" data-cfemail="e79e89818aa7829f868a978b82c984888a">[email&#160;protected]</span></a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> العنوان: 14 شارع ابوبكر، طرعان</li>
+                    <li><i class="fas fa-clock"></i> ساعات العمل: 9 ص - 9 م</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 عيادة العلاج الطبيعي. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="products.js"></script>
+<script src="product-detail.js"></script>
+</body>
+</html>

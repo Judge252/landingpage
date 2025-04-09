@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيادة العلاج الطبيعي - الملف الشخصي</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="products.html">منتجاتنا</a></li>
+                    <li><a href="treatments.html">العلاجات</a></li>
+                    <li><a href="favorite.html">المفضلة</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <!-- Add Cart and Contact Icons to Desktop Nav -->
+                    <li class="cart-icon desktop-cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="auth-icon desktop-auth">
+                        <a href="profile.html" class="active">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="contact-icon desktop-contact">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-options">
+                            <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                            <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-controls">
+                <!-- Cart Icon -->
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <!-- Auth Icon -->
+                <div class="auth-icon">
+                    <a href="profile.html" class="active">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+                <!-- Contact Icon with Dropdown -->
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-options">
+                        <a href="tel:0111234567" class="call-option">اتصل الآن</a>
+                        <a href="https://wa.me/0111234567" class="whatsapp-option" target="_blank">واتساب</a>
+                    </div>
+                </div>
+                <!-- Menu Toggle -->
+                <button class="menu-toggle" aria-label="Toggle Mobile Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="products.html">منتجاتنا</a></li>
+            <li><a href="treatments.html">العلاجات</a></li>
+            <li><a href="favorite.html">المفضلة</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="profile.html" class="active">الملف الشخصي</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="profile-section">
+            <div class="container">
+                <h1>الملف الشخصي</h1>
+
+                <div class="profile-container">
+                    <!-- Sidebar with Navigation -->
+                    <div class="profile-sidebar">
+                        <div class="profile-avatar">
+                            <img src="assets/images/profile-avatar.png" alt="صورة المستخدم" id="profile-avatar-img">
+                            <div class="avatar-overlay">
+                                <label for="avatar-upload" class="avatar-change">
+                                    <i class="fas fa-camera"></i>
+                                </label>
+                                <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+                        <h3 id="user-name">أهلاً، محمد أحمد</h3>
+                        <ul class="profile-nav">
+                            <li class="active" data-tab="personal-info">
+                                <i class="fas fa-user"></i> المعلومات الشخصية
+                            </li>
+                            <li data-tab="orders">
+                                <i class="fas fa-shopping-bag"></i> طلباتي
+                            </li>
+                            <li data-tab="favorites">
+                                <i class="fas fa-heart"></i> المفضلة
+                            </li>
+                            <li data-tab="address">
+                                <i class="fas fa-map-marker-alt"></i> العناوين
+                            </li>
+                            <li data-tab="security">
+                                <i class="fas fa-lock"></i> الأمان
+                            </li>
+                            <li class="logout">
+                                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Profile Content -->
+                    <div class="profile-content">
+                        <!-- Personal Information Tab -->
+                        <div class="tab-content active" id="personal-info">
+                            <h2>المعلومات الشخصية</h2>
+                            <form class="profile-form">
+                                <div class="form-group">
+                                    <label for="full-name">الاسم الكامل</label>
+                                    <input type="text" id="full-name" name="full-name" value="محمد أحمد">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">البريد الإلكتروني</label>
+                                    <input type="email" id="email" name="email" value="mohammed@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">رقم الهاتف</label>
+                                    <input type="tel" id="phone" name="phone" value="966 55 1234567">
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthdate">تاريخ الميلاد</label>
+                                    <input type="date" id="birthdate" name="birthdate" value="1990-01-01">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">الجنس</label>
+                                    <select id="gender" name="gender">
+                                        <option value="male" selected>ذكر</option>
+                                        <option value="female">أنثى</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn primary-btn">حفظ التغييرات</button>
+                            </form>
+                        </div>
+
+                        <!-- Orders Tab -->
+                        <div class="tab-content" id="orders">
+                            <h2>طلباتي</h2>
+                            <div class="orders-list">
+                                <div class="order-card">
+                                    <div class="order-header">
+                                        <div class="order-id">
+                                            <span>رقم الطلب:</span>
+                                            <strong>#12345</strong>
+                                        </div>
+                                        <div class="order-date">15 مارس 2023</div>
+                                        <div class="order-status delivered">تم التسليم</div>
+                                    </div>
+                                    <div class="order-items">
+                                        <div class="order-item">
+                                            <img src="assets/images/5.jpg" alt="جهاز المساج المحمول برو">
+                                            <div class="item-details">
+                                                <h4>جهاز المساج المحمول برو</h4>
+                                                <p>العدد: 1</p>
+                                                <p class="price">899 دولار</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-total">
+                                        <span>الإجمالي:</span>
+                                        <strong>899 دولار</strong>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn secondary-btn">تفاصيل الطلب</button>
+                                        <button class="btn primary-btn">إعادة الشراء</button>
+                                    </div>
+                                </div>
+
+                                <div class="order-card">
+                                    <div class="order-header">
+                                        <div class="order-id">
+                                            <span>رقم الطلب:</span>
+                                            <strong>#12346</strong>
+                                        </div>
+                                        <div class="order-date">20 فبراير 2023</div>
+                                        <div class="order-status delivered">تم التسليم</div>
+                                    </div>
+                                    <div class="order-items">
+                                        <div class="order-item">
+                                            <img src="assets/images/3.jpg" alt="وسادة طبية">
+                                            <div class="item-details">
+                                                <h4>وسادة طبية</h4>
+                                                <p>العدد: 2</p>
+                                                <p class="price">120 دولار</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-total">
+                                        <span>الإجمالي:</span>
+                                        <strong>240 دولار</strong>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn secondary-btn">تفاصيل الطلب</button>
+                                        <button class="btn primary-btn">إعادة الشراء</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Favorites Tab -->
+                        <div class="tab-content" id="favorites">
+                            <h2>المنتجات المفضلة</h2>
+                            <div class="favorites-grid">
+                                <div class="product-card">
+                                    <div class="product-badge">خصم 25%</div>
+                                    <div class="favorite-btn active">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="product-image">
+                                        <img src="assets/images/5.jpg" alt="جهاز المساج المحمول برو">
+                                    </div>
+                                    <div class="product-details">
+                                        <h3>جهاز المساج المحمول برو</h3>
+                                        <div class="price-container">
+                                            <span class="old-price">1,200 دولار</span>
+                                            <span class="new-price">899 دولار</span>
+                                        </div>
+                                        <div class="product-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>(120)</span>
+                                        </div>
+                                        <button class="btn primary-btn add-to-cart">
+                                            <i class="fas fa-shopping-cart"></i> أضف للسلة
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="product-card">
+                                    <div class="favorite-btn active">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="product-image">
+                                        <img src="assets/images/3.jpg" alt="وسادة طبية">
+                                    </div>
+                                    <div class="product-details">
+                                        <h3>وسادة طبية</h3>
+                                        <div class="price-container">
+                                            <span class="new-price">120 دولار</span>
+                                        </div>
+                                        <div class="product-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>(84)</span>
+                                        </div>
+                                        <button class="btn primary-btn add-to-cart">
+                                            <i class="fas fa-shopping-cart"></i> أضف للسلة
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address Tab -->
+                        <div class="tab-content" id="address">
+                            <h2>العناوين</h2>
+                            <div class="addresses-container">
+                                <div class="address-card default">
+                                    <div class="address-header">
+                                        <h4>العنوان الرئيسي</h4>
+                                        <span class="default-badge">افتراضي</span>
+                                    </div>
+                                    <div class="address-body">
+                                        <p><strong>محمد أحمد</strong></p>
+                                        <p>حي الملز، شارع التخصصي</p>
+                                        <p>الرياض، المملكة العربية السعودية</p>
+                                        <p>هاتف: 966 55 1234567</p>
+                                    </div>
+                                    <div class="address-actions">
+                                        <button class="btn secondary-btn"><i class="fas fa-pencil-alt"></i> تعديل</button>
+                                        <button class="btn text-btn"><i class="far fa-trash-alt"></i> حذف</button>
+                                    </div>
+                                </div>
+
+                                <div class="address-card">
+                                    <div class="address-header">
+                                        <h4>عنوان العمل</h4>
+                                    </div>
+                                    <div class="address-body">
+                                        <p><strong>محمد أحمد</strong></p>
+                                        <p>حي العليا، شارع العروبة</p>
+                                        <p>الرياض، المملكة العربية السعودية</p>
+                                        <p>هاتف: 966 55 1234567</p>
+                                    </div>
+                                    <div class="address-actions">
+                                        <button class="btn secondary-btn"><i class="fas fa-pencil-alt"></i> تعديل</button>
+                                        <button class="btn text-btn"><i class="far fa-trash-alt"></i> حذف</button>
+                                        <button class="btn text-btn make-default">تعيين كافتراضي</button>
+                                    </div>
+                                </div>
+
+                                <div class="add-address-card">
+                                    <button class="add-address-btn">
+                                        <i class="fas fa-plus"></i>
+                                        <span>إضافة عنوان جديد</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Tab -->
+                        <div class="tab-content" id="security">
+                            <h2>إعدادات الأمان</h2>
+                            <form class="security-form">
+                                <div class="form-group">
+                                    <label for="current-password">كلمة المرور الحالية</label>
+                                    <input type="password" id="current-password" name="current-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">كلمة المرور الجديدة</label>
+                                    <input type="password" id="new-password" name="new-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">تأكيد كلمة المرور الجديدة</label>
+                                    <input type="password" id="confirm-password" name="confirm-password">
+                                </div>
+                                <div class="password-requirements">
+                                    <h4>متطلبات كلمة المرور:</h4>
+                                    <ul>
+                                        <li>8 أحرف على الأقل</li>
+                                        <li>حرف كبير واحد على الأقل</li>
+                                        <li>رقم واحد على الأقل</li>
+                                        <li>رمز خاص واحد على الأقل (@$!%*?&)</li>
+                                    </ul>
+                                </div>
+                                <button type="submit" class="btn primary-btn">تغيير كلمة المرور</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="footer-logo">
+                    <p>نحن مركز متخصص في العلاج الطبيعي وتوفير أحدث المنتجات الطبية لتحسين صحتك وراحتك.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="products.html">منتجاتنا</a></li>
+                        <li><a href="treatments.html">العلاجات</a></li>
+                        <li><a href="favorite.html">المفضلة</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+966 11 234 5678</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@ptclinic.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية للحصول على آخر العروض والأخبار</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        <button type="submit" class="btn primary-btn">اشترك</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 عيادة العلاج الطبيعي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html> 

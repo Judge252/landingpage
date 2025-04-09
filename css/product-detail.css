@@ -1,0 +1,345 @@
+/* Root Variables */
+:root {
+    --primary-color: #1D3557;
+    --secondary-color: #70AD47;
+    --accent-color: #E63946;
+    --light-bg: #f9f9f9;
+    --dark-bg: #1D3557;
+    --text-color: #333;
+    --text-light: #fff;
+    --border-radius: 10px;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Add RTL support for Arabic */
+[dir="rtl"] .nav-container,
+html[lang="ar"] .nav-container {
+    padding: 15px 20px;
+    margin: 0 auto;
+}
+
+/* Ensure navigation links have proper spacing in RTL */
+[dir="rtl"] nav ul li,
+html[lang="ar"] nav ul li {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Tajawal', 'Arial', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+}
+
+.primary-btn {
+    background-color: var(--secondary-color);
+    padding: 12px 25px;
+    font-size: 1.1rem;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Product Detail Section */
+.product-detail-section {
+    padding: 60px 0;
+    background-color: var(--light-bg);
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+}
+
+.product-card {
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    max-width: 280px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Maintain a square aspect ratio */
+    overflow: visible;
+}
+
+.product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.new-badge {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+.bestseller-badge {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    right: auto;
+    left: 10px;
+}
+
+.product-actions {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: var(--transition);
+}
+
+.product-card:hover .product-actions {
+    bottom: 0;
+}
+
+.action-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--text-light);
+    color: var(--text-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.action-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    height: 2.6em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: #FFD700;
+    margin-left: 5px;
+}
+
+.stars i {
+    margin-left: 2px;
+}
+
+.review-count {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.current-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.old-price {
+    font-size: 1rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.product-detail-info {
+    padding: 20px;
+}
+
+.product-detail-info h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.product-detail-info .product-rating {
+    margin-bottom: 20px;
+}
+
+.product-detail-info .product-price {
+    margin-bottom: 20px;
+}
+
+.product-detail-info .current-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.product-detail-info .old-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.product-detail-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+/* Media Queries for Product Detail */
+@media (max-width: 992px) {
+    .product-detail {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        max-width: 100%;
+    }
+
+    .product-detail-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-detail-info .current-price {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-detail {
+        padding: 20px;
+    }
+
+    .product-detail-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .product-detail-info .current-price {
+        font-size: 1.4rem;
+    }
+}
