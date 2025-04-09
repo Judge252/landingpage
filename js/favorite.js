@@ -49,20 +49,20 @@ function displayFavorites() {
 function createItemCard(item) {
     return `
         <div class="item-card" data-id="${item.id}">
-            <div class="item-image">
+                    <div class="item-image">
                 <img src="${item.image}" alt="${item.name}">
             </div>
             <div class="item-type">${item.category}</div>
             <div class="item-actions">
-                <button class="remove-favorite" data-id="${item.id}">
+                        <button class="remove-favorite" data-id="${item.id}">
                     <i class="fas fa-heart"></i>
                 </button>
                 <button class="add-to-cart" data-id="${item.id}">
                     <i class="fas fa-shopping-cart"></i>
-                </button>
-            </div>
-            <div class="item-info">
-                <h3 class="item-name">${item.name}</h3>
+                        </button>
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">${item.name}</h3>
                 <div class="item-price">
                     <span class="current-price">${item.price} ريال</span>
                     ${item.oldPrice ? `<span class="old-price">${item.oldPrice} ريال</span>` : ''}
@@ -71,11 +71,11 @@ function createItemCard(item) {
                     ${generateRatingStars(item.rating)}
                     <span class="rating-count">(${item.reviewCount || 0})</span>
                 </div>
-            </div>
-        </div>
-    `;
-}
-
+                        </div>
+                    </div>
+                `;
+            }
+            
 // Generate rating stars
 function generateRatingStars(rating) {
     const fullStars = Math.floor(rating);
@@ -123,7 +123,7 @@ function handleAddToCart(event) {
                 cart.push({ ...product, quantity: 1 });
             }
             // Update localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem('cart', JSON.stringify(cart));
             // Update cart count
             updateCartCount();
             showNotification('تمت إضافة المنتج إلى السلة');

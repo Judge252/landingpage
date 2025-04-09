@@ -116,8 +116,8 @@ async function handleLogin(event) {
         setLoadingState(true);
         
         // Simulate login delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
         // Check if user exists in localStorage
         const users = JSON.parse(localStorage.getItem('users')) || [];
         const user = users.find(u => u.email === email && u.password === password);
