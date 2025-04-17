@@ -13,6 +13,7 @@
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <!-- Header -->
@@ -208,6 +209,29 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Ensure mobile menu works correctly
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                // Direct click handler for mobile menu toggle
+                menuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('show');
+                    
+                    // Force display style as well for extra reliability
+                    if (mobileMenu.classList.contains('show')) {
+                        mobileMenu.style.display = 'flex';
+                    } else {
+                        mobileMenu.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
     <script src="js/contact.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <!-- Header -->
@@ -305,40 +306,28 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script>
-        // Prevent double initialization of mobile menu
-        window.mobileMenuInitialized = true;
-    </script>
-    <script src="js/products.js"></script>
-    
-    <!-- Mobile Menu Test Script -->
-    <script>
+        // Ensure mobile menu works correctly
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Mobile menu test script loaded');
-            
-            // Direct test of mobile menu functionality
             const menuToggle = document.querySelector('.menu-toggle');
             const mobileMenu = document.querySelector('.mobile-menu');
             
             if (menuToggle && mobileMenu) {
-                console.log('Mobile menu elements found by test script');
-                
-                // Add a direct click handler as backup
+                // Direct click handler for mobile menu toggle
                 menuToggle.addEventListener('click', function(e) {
-                    console.log('Menu toggle clicked directly from test script');
                     e.preventDefault();
                     e.stopPropagation();
+                    mobileMenu.classList.toggle('show');
                     
-                    // Force toggle the menu visibility
-                    if (mobileMenu.style.display === 'flex') {
-                        mobileMenu.style.display = 'none';
-                        console.log('Menu hidden by direct style');
-                    } else {
+                    // Force display style as well for extra reliability
+                    if (mobileMenu.classList.contains('show')) {
                         mobileMenu.style.display = 'flex';
-                        console.log('Menu shown by direct style');
+                    } else {
+                        mobileMenu.style.display = 'none';
                     }
                 });
             }
         });
     </script>
+    <script src="js/products.js"></script>
 </body>
 </html>

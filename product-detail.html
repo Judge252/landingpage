@@ -11,26 +11,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="product-detail.css">
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-    <!-- Header (Reused from products.html) -->
+    <!-- Header -->
     <header id="main-header">
         <div class="nav-container">
             <div class="logo">
-                <img src="logo.png" alt="عيادة العلاج الطبيعي" class="logo-image">
+                <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="logo-image">
             </div>
             <nav>
                 <ul>
                     <li><a href="index.html">الرئيسية</a></li>
                     <li><a href="about.html">من نحن</a></li>
-                    <li><a href="products.html">منتجاتنا</a></li>
+                    <li><a href="products.html" class="active">منتجاتنا</a></li>
+                    <li><a href="treatments.html">العلاجات</a></li>
+                    <li><a href="favorite.html">المفضلة</a></li>
                     <li><a href="contact.html">تواصل معنا</a></li>
                     <li class="cart-icon desktop-cart">
                         <a href="cart.html">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="auth-icon desktop-auth">
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
                         </a>
                     </li>
                     <li class="contact-icon desktop-contact">
@@ -49,6 +57,11 @@
                         <span class="cart-count">0</span>
                     </a>
                 </div>
+                <div class="auth-icon">
+                    <a href="profile.html">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
                 <div class="contact-icon">
                     <i class="fas fa-phone"></i>
                     <div class="contact-options">
@@ -64,8 +77,11 @@
         <ul class="mobile-menu">
             <li><a href="index.html">الرئيسية</a></li>
             <li><a href="about.html">من نحن</a></li>
-            <li><a href="products.html">منتجاتنا</a></li>
+            <li><a href="products.html" class="active">منتجاتنا</a></li>
+            <li><a href="treatments.html">العلاجات</a></li>
+            <li><a href="favorite.html">المفضلة</a></li>
             <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="profile.html">الملف الشخصي</a></li>
         </ul>
     </header>
 
@@ -94,64 +110,66 @@
         </section>
     </main>
 
-    <!-- Footer (Reused from products.html) -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <div class="logo">
-                    <img src="logo.png" alt="عيادة العلاج الطبيعي" class="logo-image">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="footer-logo">
+                    <p>نحن مركز متخصص في العلاج الطبيعي وتوفير أحدث المنتجات الطبية لتحسين صحتك وراحتك.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
-                <p>نقدم أفضل المنتجات الطبية والعلاجية لراحتك وصحتك. نحن هنا لمساعدتك في كل خطوة نحو حياة صحية أفضل.</p>
-                <div class="payment-methods">
-                    <span><i class="fab fa-cc-visa"></i></span>
-                    <span><i class="fab fa-cc-mastercard"></i></span>
-                    <span><i class="fab fa-cc-apple-pay"></i></span>
-                    <span><i class="fab fa-cc-paypal"></i></span>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="products.html">منتجاتنا</a></li>
+                        <li><a href="treatments.html">العلاجات</a></li>
+                        <li><a href="favorite.html">المفضلة</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+966 11 234 5678</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@ptclinic.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية للحصول على آخر العروض والأخبار</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        <button type="submit" class="btn primary-btn">اشترك</button>
+                    </form>
                 </div>
             </div>
-            <div class="footer-section">
-                <h3>روابط سريعة</h3>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="products.html">منتجاتنا</a></li>
-                    <li><a href="contact.html">تواصل معنا</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2024 عيادة العلاج الطبيعي. جميع الحقوق محفوظة.</p>
             </div>
-            <div class="footer-section">
-                <h3>فئات المنتجات</h3>
-                <ul>
-                    <li><a href="#">أجهزة المساج</a></li>
-                    <li><a href="#">أجهزة الركض</a></li>
-                    <li><a href="#">وسائد طبية</a></li>
-                    <li><a href="#">دعامات طبية</a></li>
-                    <li><a href="#">أجهزة قياس</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>تواصل معنا</h3>
-                <ul class="contact-info">
-                    <li><i class="fas fa-phone"></i> الهاتف: 011 123 4567</li>
-                    <li><i class="fas fa-envelope"></i> البريد: <a href="/cdn-cgi/l/email-protection#750c1b131a35100d14180d11185b161a18"><span class="__cf_email__" data-cfemail="e79e89818aa7829f868a978b82c984888a">[email&#160;protected]</span></a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> العنوان: 14 شارع ابوبكر، طرعان</li>
-                    <li><i class="fas fa-clock"></i> ساعات العمل: 9 ص - 9 م</li>
-                </ul>
-                <div class="social-icons">
-                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>© 2024 عيادة العلاج الطبيعي. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="products.js"></script>
-<script src="product-detail.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/product-detail.js"></script>
 </body>
 </html>
