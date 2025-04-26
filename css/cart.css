@@ -877,7 +877,7 @@ nav ul li a:hover::after {
 
 /* Footer Styles */
 footer {
-    background-color: var(--dark-bg);
+    background-color: #646464;
     color: var(--text-light);
     padding: 60px 0 0;
 }

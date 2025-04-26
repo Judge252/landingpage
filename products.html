@@ -14,6 +14,89 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/footer.css">
+    <style>
+        /* Booking CTA Section - Exact match to about.html */
+        .cta-booking {
+            background-color: #404040;
+            background-image: linear-gradient(rgba(29, 53, 87, 0.7), rgba(29, 53, 87, 0.7));
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .booking-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .booking-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .booking-text {
+            text-align: right;
+            color: white;
+        }
+
+        .booking-text h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .booking-text p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .call-btn {
+            background-color: white;
+            color: #1D3557;
+            border-radius: 30px;
+            padding: 12px 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .call-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            border-radius: 30px;
+            padding: 12px 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #1DA856;
+        }
+
+        @media (max-width: 768px) {
+            .booking-container {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .booking-text {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -27,7 +110,6 @@
                     <li><a href="index.html">الرئيسية</a></li>
                     <li><a href="about.html">من نحن</a></li>
                     <li><a href="products.html" class="active">منتجاتنا</a></li>
-                    <li><a href="treatments.html">العلاجات</a></li>
                     <li><a href="favorite.html">المفضلة</a></li>
                     <li><a href="contact.html">تواصل معنا</a></li>
                     <li class="cart-icon desktop-cart">
@@ -78,7 +160,6 @@
             <li><a href="index.html">الرئيسية</a></li>
             <li><a href="about.html">من نحن</a></li>
             <li><a href="products.html" class="active">منتجاتنا</a></li>
-            <li><a href="treatments.html">العلاجات</a></li>
             <li><a href="favorite.html">المفضلة</a></li>
             <li><a href="contact.html">تواصل معنا</a></li>
             <li><a href="profile.html">الملف الشخصي</a></li>
@@ -100,26 +181,87 @@
             <div class="container">
                 <h2>فئات المنتجات</h2>
                 <div class="categories-container">
-                    <div class="category-card" data-category="massage">
-                        <div class="category-icon"><i class="fas fa-hands"></i></div>
-                        <h3>أجهزة المساج</h3>
+                    <div class="category-card" data-category="upper">
+                        <div class="category-icon"><i class="fas fa-hand-paper"></i></div>
+                        <h3>مشدات الجزء العلوي</h3>
                     </div>
-                    <div class="category-card" data-category="treadmill">
-                        <div class="category-icon"><i class="fas fa-running"></i></div>
-                        <h3>أجهزة الركض</h3>
+                    <div class="category-card" data-category="spine">
+                        <div class="category-icon"><i class="fas fa-bone"></i></div>
+                        <h3>مشدات العمود الفقري</h3>
                     </div>
-                    <div class="category-card" data-category="pillows">
-                        <div class="category-icon"><i class="fas fa-bed"></i></div>
-                        <h3>وسائد طبية</h3>
+                    <div class="category-card" data-category="lower">
+                        <div class="category-icon"><i class="fas fa-shoe-prints"></i></div>
+                        <h3>مشدات الجزء السفلي</h3>
                     </div>
-                    <div class="category-card" data-category="supports">
-                        <div class="category-icon"><i class="fas fa-user-plus"></i></div>
-                        <h3>منتجات كبار السن</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Carousel Section -->
+        <section class="banner-carousel">
+            <div class="container">
+                <div class="banner-container">
+                    <!-- Banner/Ad 1 -->
+                    <div class="banner-slide active" data-slide-id="1">
+                        <div class="featured-content">
+                            <h2>عرض خاص</h2>
+                            <h3>مشد الظهر Lumbamed</h3>
+                            <p>مشد للعامود الفقري السفلي، يساعد في ثبات الفقرات وتخفيف الضغط عنها</p>
+                            <div class="featured-price">
+                                <span class="old-price">650 ₪</span>
+                                <span class="new-price">550 ₪</span>
+                            </div>
+                            <a href="product-detail.html?id=20" class="btn primary-btn">اطلب الآن وخصم 15%</a>
+                        </div>
+                        <div class="featured-image">
+                            <img src="assets/images/101/Lumbamed/1.png" alt="مشد الظهر Lumbamed">
+                        </div>
                     </div>
-                    <div class="category-card" data-category="measuring">
-                        <div class="category-icon"><i class="fas fa-heartbeat"></i></div>
-                        <h3>أجهزة قياس</h3>
+                    
+                    <!-- Banner/Ad 2 -->
+                    <div class="banner-slide" data-slide-id="2">
+                        <div class="featured-content">
+                            <h2>خصم 25%</h2>
+                            <h3>Genumedi مشد الركبه</h3>
+                            <p>مشد مخصص لمشاكل صابونة الركبه، يساعد في تثبيت المفصل وتخفيف الآلام</p>
+                            <div class="featured-price">
+                                <span class="old-price">350 ₪</span>
+                                <span class="new-price">300 ₪</span>
+                            </div>
+                            <a href="product-detail.html?id=16" class="btn primary-btn">اطلب الآن</a>
+                        </div>
+                        <div class="featured-image">
+                            <img src="assets/images/101/genumedi/1.png" alt="Genumedi مشد الركبه">
+                        </div>
                     </div>
+                    
+                    <!-- Banner/Ad 3 -->
+                    <div class="banner-slide" data-slide-id="3">
+                        <div class="featured-content">
+                            <h2>وصل حديثاً</h2>
+                            <h3>Airsport مشد الكاحل</h3>
+                            <p>مشد مخصص للكاحل، مناسب للحركة والرياضة، يعمل على تثبيت الكاحل مع راحة قصوى</p>
+                            <div class="featured-price">
+                                <span class="old-price">390 ₪</span>
+                                <span class="new-price">350 ₪</span>
+                            </div>
+                            <a href="product-detail.html?id=25" class="btn primary-btn">اطلب الآن</a>
+                        </div>
+                        <div class="featured-image">
+                            <img src="assets/images/new product/airsport/1.png" alt="Airsport مشد الكاحل">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Banner Navigation -->
+                <div class="banner-navigation">
+                    <button class="banner-prev" aria-label="السابق"><i class="fas fa-chevron-right"></i></button>
+                    <div class="banner-dots">
+                        <span class="banner-dot active" data-slide="1"></span>
+                        <span class="banner-dot" data-slide="2"></span>
+                        <span class="banner-dot" data-slide="3"></span>
+                    </div>
+                    <button class="banner-next" aria-label="التالي"><i class="fas fa-chevron-left"></i></button>
                 </div>
             </div>
         </section>
@@ -132,11 +274,9 @@
                     <div class="filters">
                         <select id="category-filter">
                             <option value="all">جميع الفئات</option>
-                            <option value="massage">أجهزة المساج</option>
-                            <option value="treadmill">أجهزة الركض</option>
-                            <option value="pillows">وسائد طبية</option>
-                            <option value="supports">منتجات كبار السن</option>
-                            <option value="measuring">أجهزة قياس</option>
+                            <option value="upper">مشدات الجزء العلوي</option>
+                            <option value="spine">مشدات العمود الفقري</option>
+                            <option value="lower">مشدات الجزء السفلي</option>
                         </select>
                         <select id="sort-filter">
                             <option value="popular">الأكثر شعبية</option>
@@ -157,25 +297,6 @@
             </div>
         </section>
 
-        <!-- Featured Product Banner -->
-        <section class="featured-product">
-            <div class="container">
-                <div class="featured-content">
-                    <h2>منتج الشهر</h2>
-                    <h3>جهاز المساج المحمول برو</h3>
-                    <p>استمتع بتجربة مساج احترافية في منزلك مع جهازنا المميز بتقنية الاهتزاز العميق</p>
-                    <div class="featured-price">
-                        <span class="old-price">1,200 دولار</span>
-                        <span class="new-price">899 دولار</span>
-                    </div>
-                    <button class="btn primary-btn">اطلب الآن وخصم 25%</button>
-                </div>
-                <div class="featured-image">
-                    <img src="assets/images/5.jpg" alt="جهاز المساج المحمول برو">
-                </div>
-            </div>
-        </section>
-
         <!-- Testimonials -->
         <section class="testimonials">
             <div class="container">
@@ -192,7 +313,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"منتجات رائعة وجودة عالية، ساعدني جهاز المساج بشكل كبير في التخفيف من آلام الظهر المزمنة."</p>
+                        <p class="testimonial-text">"مشد الظهر Lumbamed ممتاز جداً، خفف آلام أسفل الظهر بشكل كبير. سهل الارتداء ومريح للاستخدام اليومي."</p>
                         <p class="customer-name">أحمد محمد</p>
                     </div>
                     <div class="testimonial-card">
@@ -206,7 +327,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p class="testimonial-text">"الوسادة الطبية غيرت نومي بشكل كامل. لم أعد أعاني من آلام الرقبة بعد استخدامها."</p>
+                        <p class="testimonial-text">"كنت أعاني من التواء متكرر في الكاحل، لكن مشد Air Ankle ساعدني كثيراً في تثبيت المفصل وتمكنت من العودة للرياضة."</p>
                         <p class="customer-name">سارة عبدالله</p>
                     </div>
                     <div class="testimonial-card">
@@ -220,8 +341,8 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"توصيل سريع وخدمة عملاء ممتازة. المنتجات تستحق كل دولار. سأكرر التجربة مرة أخرى."</p>
-                        <p class="customer-name">خالد العمري</p>
+                        <p class="testimonial-text">"جودة المنتجات ممتازة وخدمة العملاء رائعة. استفدت كثيراً من نصائحهم في اختيار المشد المناسب لحالتي."</p>
+                        <p class="customer-name">محمد خالد</p>
                     </div>
                 </div>
                 <div class="testimonial-controls">
@@ -230,104 +351,15 @@
                 </div>
             </div>
         </section>
-
-        <!-- Newsletter -->
-        <section class="newsletter">
-            <div class="container">
-                <div class="newsletter-content">
-                    <h2>سجل في نشرتنا البريدية</h2>
-                    <p>احصل على خصم 10% على طلبك الأول وتابع أحدث العروض والمنتجات الجديدة</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="البريد الإلكتروني" required>
-                        <button type="submit" class="btn primary-btn">اشترك الآن</button>
-                    </form>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <img src="assets/images/logo.png" alt="عيادة العلاج الطبيعي" class="footer-logo">
-                    <p>نحن مركز متخصص في العلاج الطبيعي وتوفير أحدث المنتجات الطبية لتحسين صحتك وراحتك.</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3>روابط سريعة</h3>
-                    <ul>
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="products.html">منتجاتنا</a></li>
-                        <li><a href="treatments.html">العلاجات</a></li>
-                        <li><a href="favorite.html">المفضلة</a></li>
-                        <li><a href="contact.html">تواصل معنا</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>تواصل معنا</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <p>+966 11 234 5678</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <p>info@ptclinic.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-newsletter">
-                    <h3>النشرة البريدية</h3>
-                    <p>اشترك في نشرتنا البريدية للحصول على آخر العروض والأخبار</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
-                        <button type="submit" class="btn primary-btn">اشترك</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 عيادة العلاج الطبيعي. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
 
-    <!-- Scripts -->
+    <!-- JavaScript Files -->
     <script src="js/main.js"></script>
-    <script>
-        // Ensure mobile menu works correctly
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            if (menuToggle && mobileMenu) {
-                // Direct click handler for mobile menu toggle
-                menuToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    mobileMenu.classList.toggle('show');
-                    
-                    // Force display style as well for extra reliability
-                    if (mobileMenu.classList.contains('show')) {
-                        mobileMenu.style.display = 'flex';
-                    } else {
-                        mobileMenu.style.display = 'none';
-                    }
-                });
-            }
-        });
-    </script>
     <script src="js/products.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/footer.js"></script>
 </body>
 </html>

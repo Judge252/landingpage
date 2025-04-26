@@ -1,3 +1,6 @@
+/* Import carousel styles from index.css */
+@import url('index.css');
+
 /* Root Variables */
 :root {
     --primary-color: #1D3557;
@@ -405,37 +408,53 @@ nav ul li a:hover::after {
     background-color: var(--secondary-color);
 }
 
-.categories-container {
+/* Category Icons Custom Styles */
+.category-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    height: 80px;
+    width: 80px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
+    background-color: rgba(112, 173, 71, 0.1);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    transition: var(--transition);
+}
+
+.category-card:hover .category-icon {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Categories Container - For 3 cards */
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .category-card {
     background-color: var(--text-light);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    padding: 25px;
-    width: 180px;
+    padding: 30px 20px;
     text-align: center;
     cursor: pointer;
     transition: var(--transition);
-}
-
-.category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.category-icon {
-    font-size: 2rem;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .category-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 /* Products Section */
@@ -488,18 +507,27 @@ nav ul li a:hover::after {
     border-color: var(--secondary-color);
 }
 
+/* Products grid adjustments */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
+    margin: 40px 0;
 }
 
+/* Product card improvements */
 .product-card {
     background-color: var(--text-light);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
     overflow: hidden;
     transition: var(--transition);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    position: relative;
 }
 
 .product-card:hover {
@@ -507,11 +535,21 @@ nav ul li a:hover::after {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+.product-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .product-image {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* Maintain a square aspect ratio (adjust if needed) */
-    overflow: visible; /* Ensure no cropping of the image */
+    padding-top: 100%; /* Maintain a square aspect ratio */
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    z-index: 1;
 }
 
 .product-image img {
@@ -520,13 +558,14 @@ nav ul li a:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensure the entire image fits without cropping */
-    object-position: center; /* Center the image */
+    object-fit: contain;
+    object-position: center;
     transition: transform 0.5s ease;
 }
 
+/* This ensures the product card hover effects work */
 .product-card:hover .product-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .badge {
@@ -552,35 +591,44 @@ nav ul li a:hover::after {
     left: 10px;
 }
 
+/* Product Actions */
 .product-actions {
     position: absolute;
-    bottom: -50px;
+    bottom: 10px;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: var(--transition);
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px 5px;
+    border-radius: 5px;
 }
 
 .product-card:hover .product-actions {
-    bottom: 0;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .action-btn {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: var(--text-light);
-    color: var(--text-color);
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--primary-color);
+    font-size: 1rem;
     cursor: pointer;
     transition: var(--transition);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
 }
 
 .action-btn:hover {
@@ -588,8 +636,26 @@ nav ul li a:hover::after {
     color: var(--text-light);
 }
 
-.product-info {
-    padding: 20px;
+/* Make product actions always visible on mobile */
+@media (max-width: 768px) {
+    .product-actions {
+        opacity: 1;
+        transform: translateY(0);
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        bottom: 5px;
+    }
+    
+    .product-card:hover .product-actions {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .action-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
 }
 
 .product-name {
@@ -913,7 +979,7 @@ nav ul li a:hover::after {
 
 /* Footer Styles */
 footer {
-    background-color: var(--dark-bg);
+    background-color: #646464;
     color: var(--text-light);
     padding: 60px 0 0;
 }
@@ -1265,6 +1331,22 @@ html[lang="ar"] .footer-newsletter .newsletter-form button {
         z-index: 10000;
         position: relative;
     }
+
+    .categories-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .category-icon {
+        height: 70px;
+        width: 70px;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .category-card h3 {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1273,7 +1355,8 @@ html[lang="ar"] .footer-newsletter .newsletter-form button {
     }
     
     .categories-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
     
     .footer-container {
@@ -1315,6 +1398,11 @@ html[lang="ar"] .footer-newsletter .newsletter-form button {
     .footer-grid,
     .footer-container {
         gap: 30px;
+    }
+
+    .category-card {
+        padding: 20px 15px;
+        min-height: 150px;
     }
 }
 
@@ -1434,4 +1522,21 @@ html[lang="ar"] .footer-newsletter .newsletter-form button {
     .mobile-controls .auth-icon {
         display: none;
     }
+}
+
+/* Fix for missing Font Awesome icons */
+.fa-spine:before {
+    content: "\f5c4"; /* using bone icon as substitute */
+}
+
+.fa-head-side:before {
+    content: "\f6e9"; /* head-side-mask without the mask */
+}
+
+.fa-bone:before {
+    content: "\f5d7";
+}
+
+.products-per-page {
+    display: none;
 }

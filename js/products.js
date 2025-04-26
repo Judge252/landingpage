@@ -102,21 +102,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Products Data with Descriptions
     const productsData = [
-        { id: 1, name: "جهاز المساج المحمول برو", category: "massage", price: 899, oldPrice: 1200, rating: 4.9, reviewCount: 124, image: "assets/images/product1.jpg", isNew: true, isBestseller: true, description: "جهاز مساج محمول بتقنية الاهتزاز العميق لتخفيف الآلام والتوتر." },
-        { id: 2, name: "وسادة طبية لدعم الرقبة", category: "pillows", price: 199, oldPrice: 249, rating: 4.7, reviewCount: 86, image: "assets/images/product2.jpg", isNew: false, isBestseller: true, description: "وسادة مريحة تدعم الرقبة وتحسن جودة النوم." },
-        { id: 3, name: "جهاز قياس ضغط الدم الرقمي", category: "measuring", price: 299, oldPrice: 399, rating: 4.8, reviewCount: 73, image: "assets/images/product4.jpg", isNew: true, isBestseller: false, description: "جهاز دقيق لقياس ضغط الدم في المنزل." },
-        { id: 4, name: "جهاز ركض منزلي احترافي", category: "treadmill", price: 3999, oldPrice: 4500, rating: 4.6, reviewCount: 38, image: "assets/images/product5.jpg", isNew: true, isBestseller: false, description: "جهاز ركض قوي ومتين للتمارين المنزلية." },
-        { id: 5, name: "جهاز مساج القدم الكهربائي", category: "massage", price: 599, oldPrice: 699, rating: 4.4, reviewCount: 64, image: "assets/images/product6.jpg", isNew: false, isBestseller: true, description: "مساج قدم مريح لتخفيف الإجهاد بعد يوم طويل." },
-        { id: 6, name: "وسادة لومبار لدعم أسفل الظهر", category: "pillows", price: 159, oldPrice: null, rating: 4.3, reviewCount: 47, image: "assets/images/product7.jpg", isNew: false, isBestseller: false, description: "دعم مثالي لأسفل الظهر أثناء الجلوس." },
-        { id: 7, name: "جهاز قياس السكر المنزلي", category: "measuring", price: 249, oldPrice: 299, rating: 4.7, reviewCount: 91, image: "assets/images/product8.jpg", isNew: false, isBestseller: true, description: "جهاز سهل الاستخدام لمراقبة مستوى السكر." },
-        { id: 8, name: "جهاز ركض قابل للطي", category: "treadmill", price: 2499, oldPrice: 2799, rating: 4.5, reviewCount: 56, image: "assets/images/product10.jpg", isNew: true, isBestseller: false, description: "جهاز ركض عملي يمكن طيه لتوفير المساحة." },
-        { id: 9, name: "وسادة طبية للنوم على الجانب", category: "pillows", price: 179, oldPrice: 229, rating: 4.6, reviewCount: 62, image: "assets/images/product11.jpg", isNew: true, isBestseller: false, description: "وسادة مصممة للنوم المريح على الجانب." },
-        { id: 10, name: "جهاز مساج اليد الذكي", category: "massage", price: 349, oldPrice: 399, rating: 4.8, reviewCount: 78, image: "assets/images/product12.jpg", isNew: false, isBestseller: true, description: "مساج ذكي لليدين لتخفيف آلام المفاصل." },
-        { id: 11, name: "عكاز تقليدي", category: "supports", price: 99, oldPrice: null, rating: 4.5, reviewCount: 50, image: "assets/images/eldry/O404504_3152017131858-9-9.png", isNew: false, isBestseller: false, description: "عكاز بسيط ومتين لدعم المشي." },
-        { id: 12, name: "مشايه لكبار السن Rollator Walker", category: "supports", price: 499, oldPrice: 599, rating: 4.7, reviewCount: 85, image: "assets/images/eldry/H357049_315201710530-9-29.png", isNew: true, isBestseller: true, description: "مشاية مريحة مع عجلات لكبار السن." },
-        { id: 13, name: "عكاز ٤ نقاط", category: "supports", price: 149, oldPrice: 179, rating: 4.6, reviewCount: 60, image: "assets/images/eldry/Cat_240429_866.jpg", isNew: false, isBestseller: false, description: "عكاز بأربع نقاط لثبات إضافي." },
-        { id: 14, name: "عكاكيز canadian crutches", category: "supports", price: 199, oldPrice: 249, rating: 4.4, reviewCount: 45, image: "assets/images/eldry/Crutches8.jpg", isNew: false, isBestseller: false, description: "عكاكيز كندية مريحة للاستخدام اليومي." },
-        { id: 15, name: "عكاكيز axillary crutches", category: "supports", price: 179, oldPrice: 219, rating: 4.5, reviewCount: 55, image: "assets/images/eldry/25_4_1.jpg", isNew: false, isBestseller: false, description: "عكاكيز تحت الإبط لدعم الحركة." }
+        // Upper Body Supports (head, neck, arm, shoulder, elbow, wrist)
+        { id: 32, name: "Vista Collar دعامة الرقبه", category: "upper", price: 470, oldPrice: 520, rating: 4.8, reviewCount: 95, image: "assets/images/new product/VISTA COLLAR/1.png", images: ["assets/images/new product/VISTA COLLAR/1.png", "assets/images/new product/VISTA COLLAR/2.png", "assets/images/new product/VISTA COLLAR/3.png", "assets/images/new product/VISTA COLLAR/4.png"], isNew: true, isBestseller: true, description: "دعامة مخصصه لتثبيت العامود الفقري العنقي، تستعمل بعد الاصابات او العمليات الجراحيه، ثبات مثالي لشفاء اسرع" },
+        { id: 19, name: "Epicomed مشد الكوع", category: "upper", price: 399, oldPrice: 450, rating: 4.5, reviewCount: 69, image: "assets/images/101/Epicomed/1.png", images: ["assets/images/101/Epicomed/1.png", "assets/images/101/Epicomed/2.png", "assets/images/101/Epicomed/3.png", "assets/images/101/Epicomed/4.png", "assets/images/101/Epicomed/epicomed-elbow-supports-medi-m-228710.jpeg", "assets/images/101/Epicomed/epicomed-elbow-supports-medi-m-228715.jpeg", "assets/images/101/Epicomed/epicomed-elbow-supports-medi-m-228712.jpeg", "assets/images/101/Epicomed/epicomed-elbow-supports-medi-m-228717.jpeg"], isNew: true, isBestseller: false, description: "مشد مريح للكوع، مناسب ما بعد الاصابات، التهاب ومشاكل المفصل، يساعد في ثبات المفضل للشفاء السريع." },
+        { id: 21, name: "Manumed مشد اليد والرسغ", category: "upper", price: 450, oldPrice: 520, rating: 4.7, reviewCount: 82, image: "assets/images/101/Manumed/1.png", images: ["assets/images/101/Manumed/1.png", "assets/images/101/Manumed/2.png", "assets/images/101/Manumed/3.png", "assets/images/101/Manumed/4.png", "assets/images/101/Manumed/5.png", "assets/images/101/Manumed/manumed-active-wrist-supports-sand-m-17094.jpeg", "assets/images/101/Manumed/manumed-active-soft-wrist-supports-medi-m-190544.jpeg", "assets/images/101/Manumed/manumed-active-soft-wrist-supports-medi-m-234478.jpeg", "assets/images/101/Manumed/manumed-active-soft-wrist-supports-medi-m-234479.jpeg", "assets/images/101/Manumed/manumed-active-soft-wrist-supports-medi-m-189221.jpeg"], isNew: true, isBestseller: false, description: "مشد لتثبيت الرسغ واليد، مناسب للاصابات والالتهابات، يساعد في تخفيف الآلم وتسريع الشفاء، مصنوع من مواد مريحة عالية الجودة." },
+        { id: 22, name: "Activemed wrist مشد كف اليد", category: "upper", price: 270, oldPrice: 320, rating: 4.6, reviewCount: 75, image: "assets/images/new product/activemed wrist/Frame 2.png", images: ["assets/images/new product/activemed wrist/Frame 2.png", "assets/images/new product/activemed wrist/Frame 3.png", "assets/images/new product/activemed wrist/Frame 4.png"], isNew: true, isBestseller: false, description: "مشد مصنوع من قماش عالي الجوده ومريح للارتداء، يعزز ثبات المفصل، مناسب بعد الاصابات، التهاب المفصل والاوتار، يساعد في تخفيف التورم، الالم والالتهاب" },
+        { id: 24, name: "Airmed prim دعامة الابهام", category: "upper", price: 200, oldPrice: 230, rating: 4.5, reviewCount: 68, image: "assets/images/new product/airmed prim/Frame 2.png", images: ["assets/images/new product/airmed prim/Frame 2.png", "assets/images/new product/airmed prim/Frame 3.png", "assets/images/new product/airmed prim/8.png"], isNew: true, isBestseller: false, description: "دعامة مخصصه لتثبيت البهام، مناسب في حالات الاصابة والالتهابات في الاوتار والمفصل." },
+        { id: 30, name: "Immo sling علاقة الكتف", category: "upper", price: 199, oldPrice: 235, rating: 4.5, reviewCount: 70, image: "assets/images/new product/immo sling/5.png", images: ["assets/images/new product/immo sling/5.png", "assets/images/new product/immo sling/6.png"], isNew: true, isBestseller: false, description: "علاقه مريحه للاستعمال، مناسبه بعد الاصابات او العمليات الجراحيه" },
+        
+        // Spine Supports (back, lumbar)
+        { id: 20, name: "مشد الظهر Lumbamed", category: "spine", price: 550, oldPrice: 650, rating: 4.9, reviewCount: 110, image: "assets/images/101/Lumbamed/1.png", images: ["assets/images/101/Lumbamed/1.png", "assets/images/101/Lumbamed/2.png", "assets/images/101/Lumbamed/3.png", "assets/images/101/Lumbamed/4.png", "assets/images/101/Lumbamed/5.png", "assets/images/101/Lumbamed/6.png", "assets/images/101/Lumbamed/lumbamed-basic-lumbar-spine-orthosis-inside-m-83105.jpeg", "assets/images/101/Lumbamed/lumbamed-basis-lumbar-spine-orthosis-hand-loop-m-83108.jpeg", "assets/images/101/Lumbamed/lumbamed-basic-lumbar-support-sand-back-view-m-96539.jpeg", "assets/images/101/Lumbamed/lumbamed-plus-lumbar-support-foldable-edges-m-96631.jpeg", "assets/images/101/Lumbamed/lumbamed-basic-lumbar-supports-finger-loops--m-96628.jpeg", "assets/images/101/Lumbamed/lumbamed-basic-back-braces-lumbar-spine-m-83121.jpeg"], isNew: true, isBestseller: true, description: "مشد للعامود الفقري السفلي، يساعد في ثبات الفقرات وتخفيف الضغط عنها، يمكن استعماله بعد الاصابات او لمشاكل العامود الفقري مثل مشاكل الديسكات" },
+        { id: 27, name: "Aspen lumbar support مشد الظهر", category: "spine", price: 499, oldPrice: 550, rating: 4.9, reviewCount: 105, image: "assets/images/new product/aspen lumbar support/1.png", images: ["assets/images/new product/aspen lumbar support/1.png", "assets/images/new product/aspen lumbar support/2.png", "assets/images/new product/aspen lumbar support/3.png", "assets/images/new product/aspen lumbar support/4.png", "assets/images/new product/aspen lumbar support/5.png", "assets/images/new product/aspen lumbar support/6.png"], isNew: true, isBestseller: true, description: "مشد للظهر السفلي، مريح جدا للاستعمال، مميز بتقنية شد مخصصه لزيادة ثبات العامود الفقري" },
+        { id: 28, name: "Bady strap 26 DJO مشد الظهر", category: "spine", price: 290, oldPrice: 350, rating: 4.6, reviewCount: 77, image: "assets/images/new product/body strap 26 DJO/1.png", images: ["assets/images/new product/body strap 26 DJO/1.png", "assets/images/new product/body strap 26 DJO/2.png", "assets/images/new product/body strap 26 DJO/3.png", "assets/images/new product/body strap 26 DJO/4.png"], isNew: true, isBestseller: false, description: "مشد ظهر من شركة Donjoy مخصص لدعم العامود الفقري السفلي مع خاصيه التثبيت الثنائي، مناسب بعد الاصبات او لمشاكل العامود الفقري السفلي" },
+        
+        // Lower Body Supports (knee, ankle, foot)
+        { id: 16, name: "Genumedi مشد الركبه", category: "lower", price: 300, oldPrice: 350, rating: 4.7, reviewCount: 95, image: "assets/images/101/genumedi/1.png", images: ["assets/images/101/genumedi/1.png", "assets/images/101/genumedi/2.png", "assets/images/101/genumedi/3.png", "assets/images/101/genumedi/4.png", "assets/images/101/genumedi/5.png", "assets/images/101/genumedi/genumedi-comfort-zone-m-96511.jpeg", "assets/images/101/genumedi/genumedi-stoff-m-303438.jpeg", "assets/images/101/genumedi/genumedi-elastizitaet-m-303439.jpeg", "assets/images/101/genumedi/genumedi-silber-m-96517.jpeg", "assets/images/101/genumedi/genumedi-bgv-kniebandage-silber-m-96524.jpeg"], isNew: true, isBestseller: true, description: "مشد مخصص لمشاكل صابونة الركبه، مثل الاصابات و العمليات الجراحيه، يساعد في تثبيت المفصل، تخفيف الآلم لشفاء اسرع، مصنوع من مواد مريح لللبس" },
+        { id: 18, name: "Genumedi مشد الركبه الثانوي", category: "lower", price: 300, oldPrice: 370, rating: 4.8, reviewCount: 86, image: "assets/images/101/genumedi/2.png", images: ["assets/images/101/genumedi/2.png", "assets/images/101/genumedi/3.png", "assets/images/101/genumedi/4.png", "assets/images/101/genumedi/5.png", "assets/images/101/genumedi/genumedi-comfort-zone-m-96511.jpeg", "assets/images/101/genumedi/genumedi-stoff-m-303438.jpeg"], isNew: false, isBestseller: true, description: "يساعد في ثبات الركبه، تخفيف الآلم والالتهاب، مناسب ما بعد الصابات ومشاكل الركبه، مصنوع من مواد مريحه لللبس وعالية الجودة" },
+        { id: 17, name: "Levamed مشد الكاحل", category: "lower", price: 299, oldPrice: 350, rating: 4.6, reviewCount: 78, image: "assets/images/101/Levamed/1.png", images: ["assets/images/101/Levamed/1.png", "assets/images/101/Levamed/2.png", "assets/images/101/Levamed/levamed-ankle-supports-medi-m-109285.jpeg", "assets/images/101/Levamed/levamed-ankle-supports-medi-m-109297.jpeg"], isNew: true, isBestseller: false, description: "مشد لمفصل الكاحل، مناسب للاصبات مثل التواء الكاحل، يساعد في تخفيف الآلم والتورم، يعطي ثبات وراحه للمفصل" },
+        { id: 23, name: "Air ankle دعامة الكاحل", category: "lower", price: 220, oldPrice: 260, rating: 4.7, reviewCount: 84, image: "assets/images/new product/air ankle/Frame 2.png", images: ["assets/images/new product/air ankle/Frame 2.png", "assets/images/new product/air ankle/Frame 3.png", "assets/images/new product/air ankle/Frame 4.png", "assets/images/new product/air ankle/Frame 5.png", "assets/images/new product/air ankle/Frame 6.png", "assets/images/new product/air ankle/6.png", "assets/images/new product/air ankle/7.png", "assets/images/new product/air ankle/8.png"], isNew: true, isBestseller: false, description: "دعامة مخصصه ما بعد اصابات الكاحل والمعليات الجراحيه، تعمل على تثبيت المفصل وزيادة ثباته، تشمل وسائد هاوئيه لراحه وثبات قوي." },
+        { id: 25, name: "Airsport مشد الكاحل", category: "lower", price: 350, oldPrice: 390, rating: 4.8, reviewCount: 92, image: "assets/images/new product/airsport/1.png", images: ["assets/images/new product/airsport/1.png", "assets/images/new product/airsport/2.png", "assets/images/new product/airsport/3.png", "assets/images/new product/airsport/4.png"], isNew: true, isBestseller: true, description: "مشدد مخصص للكاحل، مناسب للحركه والرياضه، يعمل على تثبيت الحاكل مع راحه قصوى، اربطه قويه لدعم المفصل، قوي ومريح" },
+        { id: 31, name: "Medi elastic ankle مشد الكاحل", category: "lower", price: 67, oldPrice: 95, rating: 4.3, reviewCount: 60, image: "assets/images/new product/medi elastic ankle/1.png", images: ["assets/images/new product/medi elastic ankle/1.png", "assets/images/new product/medi elastic ankle/2.png", "assets/images/new product/medi elastic ankle/3.png", "assets/images/new product/medi elastic ankle/4.png", "assets/images/new product/medi elastic ankle/5.png", "assets/images/new product/medi elastic ankle/6.png"], isNew: true, isBestseller: false, description: "مشد خفيف ومريح للكاحل، يمكن استعماله مع الحذاء، مناسب للاصابات الخفيفه مثل التواء الكاحل" },
+        { id: 26, name: "Ankle foot orthosis دعامة كف القدم", category: "lower", price: 390, oldPrice: 450, rating: 4.7, reviewCount: 80, image: "assets/images/new product/ankle foot orthosis/1.png", images: ["assets/images/new product/ankle foot orthosis/1.png", "assets/images/new product/ankle foot orthosis/2.png", "assets/images/new product/ankle foot orthosis/3.png", "assets/images/new product/ankle foot orthosis/4.png", "assets/images/new product/ankle foot orthosis/5.png"], isNew: true, isBestseller: false, description: "دعامة مخصصه لكف القدم AFO تستعمل في حالات ضعف عضلات القدم بعد اصابات الاعصاب، او بعد الستكة الدماغيه" },
+        { id: 29, name: "Droop foot PRIM", category: "lower", price: 390, oldPrice: 430, rating: 4.7, reviewCount: 89, image: "assets/images/new product/drop foot PRIM/1.png", images: ["assets/images/new product/drop foot PRIM/1.png", "assets/images/new product/drop foot PRIM/2.png", "assets/images/new product/drop foot PRIM/3.png", "assets/images/new product/drop foot PRIM/4.png"], isNew: true, isBestseller: false, description: "جهاز مخصص لمشاكل سقوط القدم، اعتلال باعصاب القدم او بعد الجلطه الدماغيه" }
     ];
 
     // DOM Elements
@@ -209,75 +216,66 @@ document.addEventListener('DOMContentLoaded', () => {
         currentProducts.forEach(product => {
             const badges = `${product.isNew ? '<span class="badge new-badge">جديد</span>' : ''}${product.isBestseller ? '<span class="badge bestseller-badge">الأكثر مبيعاً</span>' : ''}`;
             const priceHTML = product.oldPrice ? 
-                `<div class="product-price"><span class="current-price">${sanitizeInput(product.price)} دولار</span><span class="old-price">${sanitizeInput(product.oldPrice)} دولار</span></div>` : 
-                `<div class="product-price"><span class="current-price">${sanitizeInput(product.price)} دولار</span></div>`;
+                `<div class="product-price"><span class="current-price">${sanitizeInput(product.price)} ₪</span><span class="old-price">${sanitizeInput(product.oldPrice)} ₪</span></div>` : 
+                `<div class="product-price"><span class="current-price">${sanitizeInput(product.price)} ₪</span></div>`;
             
             productsHTML += `
                 <div class="product-card" data-id="${sanitizeInput(product.id)}">
-                    <a href="product-detail.html?id=${sanitizeInput(product.id)}" class="product-link">
-                        <div class="product-image">
-                            <img src="${sanitizeInput(product.image)}" alt="${sanitizeInput(product.name)}">
-                            ${badges}
-                            <div class="product-actions">
-                                <button class="action-btn"><i class="${favorites.includes(product.id) ? 'fas' : 'far'} fa-heart"></i></button>
-                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i></button>
-                                <button class="action-btn"><i class="fas fa-eye"></i></button>
-                            </div>
+                    <div class="product-image">
+                        <img src="${sanitizeInput(product.image)}" alt="${sanitizeInput(product.name)}">
+                        ${badges}
+                        <div class="product-actions">
+                            <button class="action-btn favorite-btn" title="إضافة للمفضلة"><i class="${favorites.includes(product.id) ? 'fas' : 'far'} fa-heart"></i></button>
+                            <button class="action-btn add-to-cart" title="إضافة للسلة"><i class="fas fa-shopping-cart"></i></button>
                         </div>
-                        <div class="product-info">
-                            <h3 class="product-name">${sanitizeInput(product.name)}</h3>
-                            <div class="product-rating">
-                                <div class="stars">${generateStars(product.rating)}</div>
-                                <span class="review-count">(${sanitizeInput(product.reviewCount)})</span>
-                            </div>
-                            ${priceHTML}
-                            <button class="btn add-to-cart-btn">أضف للسلة</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">${sanitizeInput(product.name)}</h3>
+                        <div class="product-rating">
+                            <div class="stars">${generateStars(product.rating)}</div>
+                            <span class="review-count">(${sanitizeInput(product.reviewCount)})</span>
                         </div>
-                    </a>
+                        ${priceHTML}
+                    </div>
                 </div>
             `;
         });
         
+        if (currentProducts.length === 0) {
+            productsHTML = '<div class="no-products">لا توجد منتجات متاحة</div>';
+        }
+        
         productsContainer.innerHTML = productsHTML;
         
-        // Add event listeners to the newly created elements
-        document.querySelectorAll('.product-card').forEach(card => {
-            const product = filteredProducts.find(p => p.id.toString() === card.dataset.id);
-            if (!product) return;
-            
-            // Add to favorites functionality
-            const heartButton = card.querySelector('.action-btn .fa-heart').parentElement;
-            heartButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                if (!favorites.includes(product.id)) {
-                    favorites.push(product.id);
-                    localStorage.setItem('favorites', JSON.stringify(favorites));
-                    alert(`تمت إضافة ${sanitizeInput(product.name)} إلى المفضلة`);
-                    heartButton.querySelector('i').classList.remove('far');
-                    heartButton.querySelector('i').classList.add('fas');
-                } else {
-                    // Option to remove from favorites
-                    if (confirm(`${sanitizeInput(product.name)} موجود بالفعل في المفضلة. هل تريد إزالته؟`)) {
-                        favorites = favorites.filter(id => id !== product.id);
-                        localStorage.setItem('favorites', JSON.stringify(favorites));
-                        alert(`تمت إزالة ${sanitizeInput(product.name)} من المفضلة`);
-                        heartButton.querySelector('i').classList.remove('fas');
-                        heartButton.querySelector('i').classList.add('far');
-                    }
+        // Add event listeners to the new elements
+        const productCards = document.querySelectorAll('.product-card');
+        const favoriteBtns = document.querySelectorAll('.favorite-btn');
+        const addToCartBtns = document.querySelectorAll('.add-to-cart');
+
+        // Make entire product card clickable
+        productCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Only navigate if the click wasn't on an action button
+                if (!e.target.closest('.action-btn')) {
+                    const productId = card.dataset.id;
+                    window.location.href = `product-detail.html?id=${productId}`;
                 }
             });
-            
-            // Add to cart functionality
-            card.querySelectorAll('.add-to-cart, .add-to-cart-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    cart.push(product);
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    updateCartCount();
-                    alert(`تمت إضافة ${sanitizeInput(product.name)} للسلة`);
-                });
+        });
+        
+        favoriteBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent card click event
+                const productId = parseInt(btn.closest('.product-card').dataset.id);
+                toggleFavorite(productId, btn);
+            });
+        });
+        
+        addToCartBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent card click event
+                const productId = parseInt(btn.closest('.product-card').dataset.id);
+                addToCart(productId);
             });
         });
     }
@@ -323,4 +321,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Toggle Favorite
+    function toggleFavorite(productId, buttonElement) {
+        const product = productsData.find(p => p.id === productId);
+        if (!product) return;
+        
+        const icon = buttonElement.querySelector('i');
+        
+        if (!favorites.includes(productId)) {
+            // Add to favorites
+            favorites.push(productId);
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            alert(`تمت إضافة ${sanitizeInput(product.name)} إلى المفضلة`);
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+        } else {
+            // Remove from favorites
+            if (confirm(`${sanitizeInput(product.name)} موجود بالفعل في المفضلة. هل تريد إزالته؟`)) {
+                favorites = favorites.filter(id => id !== productId);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                alert(`تمت إزالة ${sanitizeInput(product.name)} من المفضلة`);
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+            }
+        }
+    }
+
+    // Add to Cart
+    function addToCart(productId) {
+        const product = productsData.find(p => p.id === productId);
+        if (!product) return;
+        
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        alert(`تمت إضافة ${sanitizeInput(product.name)} للسلة`);
+    }
 });
